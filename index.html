@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KnowledgeFlow Engine — KFE v1.0</title>
+<!-- Fonts (can be self-hosted for offline use) -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- For full offline: download d3.min.js and point the script to local copy -->
+<script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
+</head>
+<body class="theme-dark">
+<header class="topbar">
+<div class="left">
+<div class="logo">📚</div>
+<div class="appname">KnowledgeFlow Engine</div>
+</div>
+
+
+<div class="center">
+<input id="search" placeholder="Search topics, tools, keywords..." aria-label="Search" />
+</div>
+
+
+<div class="right">
+<div class="controls">
+<button id="expandAll">Expand All</button>
+<button id="collapseAll">Collapse All</button>
+<button id="themeToggle">Light</button>
+<button id="exportJSON">Export JSON</button>
+<button id="exportPNG">Export PNG</button>
+</div>
+</div>
+</header>
+
+
+<main class="layout">
+<section class="visual" id="visual">
+<div id="svgwrap" class="svgwrap">
+<svg id="treeSvg" preserveAspectRatio="xMidYMid meet"></svg>
+<div id="minimap" class="minimap"></div>
+</div>
+<div class="statusbar">
+<div id="nodeCount" class="node-count">Nodes: 0</div>
+<div id="hint" class="hint">Pinch to zoom, drag to pan. Tap a node to see details.</div>
+</div>
+</section>
+
+
+<aside class="panel" id="panel">
+<div class="panel-inner">
+<h2 id="panelTitle">Click a node</h2>
+<p id="panelDesc">Select any topic on the tree to view its details.</p>
+<div id="panelTags" class="tags"></div>
+<a id="panelLink" class="btn-link" target="_blank" rel="noopener" href="#" hidden>Visit Resource</a>
+<div class="panel-foot">
+<small>Powered by KnowledgeFlow Engine | Open Source Visual Learning Framework</small>
+</div>
+</div>
+</aside>
+</main>
+
+
+<footer class="footer">KnowledgeFlow Engine — KFE v1.0</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
